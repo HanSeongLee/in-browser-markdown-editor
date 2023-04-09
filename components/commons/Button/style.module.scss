@@ -1,0 +1,31 @@
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.primary {
+    background: var(--primary-color);
+    border-radius: 4px;
+  }
+
+  &.default {
+
+  }
+
+  &.menu {
+    width: 56px;
+    height: 56px;
+    background: var(--black-700-color);
+
+    svg {
+      width: 23px;
+      height: 14px;
+    }
+  }
+}
