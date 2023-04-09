@@ -4,23 +4,23 @@
 // Heading
 @mixin heading-medium {
   font: {
-    family: var(--robo-font);
+    family: var(--roboto-font);
     style: normal;
     weight: 400;
     size: 15px;
-    line-height: 18px;
   }
+  line-height: 18px;
   color: var(--black-700-color);
 }
 
 @mixin heading-small {
   font: {
-    family: var(--robo-font);
+    family: var(--roboto-font);
     style: normal;
     weight: 500;
     size: 14px;
-    line-height: 16px;
   }
+  line-height: 16px;
   letter-spacing: 2px;
   color: var(--black-700-color);
 }
@@ -28,7 +28,7 @@
 // Body
 @mixin body-small {
   font: {
-    family: var(--robo-font);
+    family: var(--roboto-font);
     style: normal;
     weight: 300;
     size: 13px;
@@ -41,12 +41,12 @@
 // Heading
 @mixin preview-heading($weight, $size, $line-height, $color) {
   font: {
-    family: var(--robo-slab-font);
+    family: var(--roboto-slab-font);
     style: normal;
     weight: $weight;
     size: $size;
-    line-height: $line-height;
   }
+  line-height: $line-height;
   color: $color;
 }
 
@@ -77,12 +77,12 @@
 // Paragraph
 @mixin preview-paragraph {
   font: {
-    family: var(--robo-slab-font);
+    family: var(--roboto-slab-font);
     style: normal;
     weight: 400;
     size: 14px;
-    line-height: 24px;
   }
+  line-height: 24px;
   color: var(--black-700-color);
 }
 
@@ -94,7 +94,7 @@
 // Markdown Code
 @mixin preview-markdown-code {
   font: {
-    family: var(--robo-mono-font);
+    family: var(--roboto-mono-font);
     style: normal;
     weight: 400;
     size: 14px;
