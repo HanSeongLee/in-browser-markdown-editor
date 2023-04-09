@@ -1,0 +1,22 @@
+:root {
+  // Colors
+
+  // Base Colors
+  --black-1000-color: #151619;
+  --black-900-color: #1D1F22;
+  --black-800-color: #2B2D31;
+  --black-700-color: #35393F;
+  --black-600-color: #5A6069;
+  --black-500-color: #7C8187;
+  --black-400-color: #C1C4CB;
+  --black-300-color: #E4E4E4;
+  --black-200-color: #F5F5F5;
+  --black-100-color: #FFFFFF;
+  --white-color: var(--black-100-color);
+  --orange-color: #E46643;
+  --light-orange-color: #F39765;
+
+  // Primary Colors
+  --primary-color: var(--orange-color);
+  --primary-highlight-color: var(--light-orange-color);
+}
