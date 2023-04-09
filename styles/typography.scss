@@ -1,0 +1,104 @@
+// Typography
+
+// In App
+// Heading
+@mixin heading-medium {
+  font: {
+    family: var(--robo-font);
+    style: normal;
+    weight: 400;
+    size: 15px;
+    line-height: 18px;
+  }
+  color: var(--black-700-color);
+}
+
+@mixin heading-small {
+  font: {
+    family: var(--robo-font);
+    style: normal;
+    weight: 500;
+    size: 14px;
+    line-height: 16px;
+  }
+  letter-spacing: 2px;
+  color: var(--black-700-color);
+}
+
+// Body
+@mixin body-small {
+  font: {
+    family: var(--robo-font);
+    style: normal;
+    weight: 300;
+    size: 13px;
+    height: 15px;
+  }
+  color: var(--black-700-color);
+}
+
+// Preview
+// Heading
+@mixin preview-heading($weight, $size, $line-height, $color) {
+  font: {
+    family: var(--robo-slab-font);
+    style: normal;
+    weight: $weight;
+    size: $size;
+    line-height: $line-height;
+  }
+  color: $color;
+}
+
+@mixin preview-heading-1 {
+  @include preview-heading(700, 32px, 42px, var(--black-700-color));
+}
+
+@mixin preview-heading-2 {
+  @include preview-heading(300, 28px, 37px, var(--black-700-color));
+}
+
+@mixin preview-heading-3 {
+  @include preview-heading(700, 24px, 32px, var(--black-700-color));
+}
+
+@mixin preview-heading-4 {
+  @include preview-heading(700, 20px, 26px, var(--black-700-color));
+}
+
+@mixin preview-heading-5 {
+  @include preview-heading(700, 16px, 21px, var(--black-700-color));
+}
+
+@mixin preview-heading-6 {
+  @include preview-heading(700, 14px, 18px, var(--primary-color));
+}
+
+// Paragraph
+@mixin preview-paragraph {
+  font: {
+    family: var(--robo-slab-font);
+    style: normal;
+    weight: 400;
+    size: 14px;
+    line-height: 24px;
+  }
+  color: var(--black-700-color);
+}
+
+@mixin preview-paragraph-bold {
+  @include preview-paragraph;
+  font-weight: 700;
+}
+
+// Markdown Code
+@mixin preview-markdown-code {
+  font: {
+    family: var(--robo-mono-font);
+    style: normal;
+    weight: 400;
+    size: 14px;
+    height: 24px;
+  }
+  color: var(--black-700-color);
+}
