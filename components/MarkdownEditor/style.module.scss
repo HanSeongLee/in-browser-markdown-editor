@@ -1,0 +1,10 @@
+@import "styles/typography";
+
+.markdownEditor {
+  @include preview-markdown-code;
+
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 16px 12px;
+}
