@@ -1,3 +1,4 @@
+@import "styles/typography";
 
 .button {
   display: flex;
@@ -10,6 +11,9 @@
   cursor: pointer;
 
   &.primary {
+    @include heading-medium;
+
+    color: var(--white-color);
     background: var(--primary-color);
     border-radius: 4px;
   }
