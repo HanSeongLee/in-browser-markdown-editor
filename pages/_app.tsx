@@ -1,6 +1,7 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
-import { Roboto, Roboto_Slab, Roboto_Mono } from 'next/font/google';
+import { Roboto, Roboto_Mono, Roboto_Slab } from 'next/font/google';
+import { ThemeContextWrapper } from 'lib/ThemeContext';
 
 const roboto = Roboto({
   weight: ['300', '400', '500'],
@@ -18,18 +19,20 @@ const robotoMono = Roboto_Mono({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-      <>
-        <style jsx global>{`
-          :root {
-            --roboto-font: ${roboto.style.fontFamily};
-            --roboto-slab-font: ${robotoSlab.style.fontFamily};
-            --roboto-mono-font: ${robotoMono.style.fontFamily};
-          }
-        `}</style>
-        <Component {...pageProps} />
-      </>
-  );
+    return (
+        <>
+            <style jsx global>{`
+              :root {
+                --roboto-font: ${roboto.style.fontFamily};
+                --roboto-slab-font: ${robotoSlab.style.fontFamily};
+                --roboto-mono-font: ${robotoMono.style.fontFamily};
+              }
+            `}</style>
+            <ThemeContextWrapper>
+                <Component {...pageProps} />
+            </ThemeContextWrapper>
+        </>
+    );
 }
 
 export default MyApp
