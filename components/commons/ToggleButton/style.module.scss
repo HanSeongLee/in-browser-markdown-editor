@@ -1,0 +1,29 @@
+
+.toggleButton {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  background: var(--black-600-color);
+  border-radius: 14.5px;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--white-color);
+    transform: translateX(6px) translateY(6px);
+    transition: transform 0.3s;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &.on {
+    &::before {
+      transform: translateX(calc(48px - 100% - 6px)) translateY(6px);
+    }
+  }
+}
