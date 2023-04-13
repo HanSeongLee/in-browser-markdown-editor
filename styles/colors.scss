@@ -27,10 +27,12 @@
   --theme-background-color: var(--white-color);
   --theme-title-bar-text-color: var(--black-500-color);
   --theme-title-bar-background-color: var(--black-200-color);
+  --theme-editor-color: var(--black-700-color);
 }
 
 .dark {
   --theme-background-color: var(--black-1000-color);
   --theme-title-bar-text-color: var(--black-400-color);
   --theme-title-bar-background-color: var(--black-900-color);
+  --theme-editor-color: var(--black-400-color);
 }
