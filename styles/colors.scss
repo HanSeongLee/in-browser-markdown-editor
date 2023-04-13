@@ -19,4 +19,18 @@
   // Primary Colors
   --primary-color: var(--orange-color);
   --primary-highlight-color: var(--light-orange-color);
+
+  --theme-header-background-color: var(--black-800-color);
+}
+
+.light {
+  --theme-background-color: var(--white-color);
+  --theme-title-bar-text-color: var(--black-500-color);
+  --theme-title-bar-background-color: var(--black-200-color);
+}
+
+.dark {
+  --theme-background-color: var(--black-1000-color);
+  --theme-title-bar-text-color: var(--black-400-color);
+  --theme-title-bar-background-color: var(--black-900-color);
 }

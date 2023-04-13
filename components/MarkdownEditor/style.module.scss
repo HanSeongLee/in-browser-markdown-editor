@@ -4,6 +4,7 @@
   @include preview-markdown-code;
 
   flex: 1;
+  background: var(--theme-background-color);
   border: none;
   outline: none;
   padding: 16px 12px;

@@ -7,14 +7,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--black-500-color);
+  color: var(--theme-title-bar-text-color);
   text-transform: uppercase;
-  background: var(--black-200-color);
+  background: var(--theme-title-bar-background-color);
   padding: 12px 4px 14px 16px;
 
   .buttonContainer {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    svg path {
+      fill: var(--theme-title-bar-text-color);
+    }
   }
 }
