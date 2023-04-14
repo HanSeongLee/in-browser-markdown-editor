@@ -51,27 +51,27 @@
 }
 
 @mixin preview-heading-1 {
-  @include preview-heading(700, 32px, 42px, var(--black-700-color));
+  @include preview-heading(700, 32px, 42px, var(--theme-preview-heading-1-color));
 }
 
 @mixin preview-heading-2 {
-  @include preview-heading(300, 28px, 37px, var(--black-700-color));
+  @include preview-heading(300, 28px, 37px, var(--theme-preview-heading-2-color));
 }
 
 @mixin preview-heading-3 {
-  @include preview-heading(700, 24px, 32px, var(--black-700-color));
+  @include preview-heading(700, 24px, 32px, var(--theme-preview-heading-3-color));
 }
 
 @mixin preview-heading-4 {
-  @include preview-heading(700, 20px, 26px, var(--black-700-color));
+  @include preview-heading(700, 20px, 26px, var(--theme-preview-heading-4-color));
 }
 
 @mixin preview-heading-5 {
-  @include preview-heading(700, 16px, 21px, var(--black-700-color));
+  @include preview-heading(700, 16px, 21px, var(--theme-preview-heading-5-color));
 }
 
 @mixin preview-heading-6 {
-  @include preview-heading(700, 14px, 18px, var(--primary-color));
+  @include preview-heading(700, 14px, 18px, var(--theme-preview-heading-6-color));
 }
 
 // Paragraph
@@ -83,7 +83,7 @@
     size: 14px;
   }
   line-height: 24px;
-  color: var(--black-700-color);
+  color: var(--theme-preview-paragraph-color);
 }
 
 @mixin preview-paragraph-bold {
@@ -100,5 +100,5 @@
     size: 14px;
     height: 24px;
   }
-  color: var(--black-700-color);
+  color: var(--theme-preview-markdown-code-color);
 }

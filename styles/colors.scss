@@ -28,6 +28,20 @@
   --theme-title-bar-text-color: var(--black-500-color);
   --theme-title-bar-background-color: var(--black-200-color);
   --theme-editor-color: var(--black-700-color);
+
+  --theme-preview-heading-1-color: var(--black-700-color);
+  --theme-preview-heading-2-color: var(--black-700-color);
+  --theme-preview-heading-3-color: var(--black-700-color);
+  --theme-preview-heading-4-color: var(--black-700-color);
+  --theme-preview-heading-5-color: var(--black-700-color);
+  --theme-preview-heading-6-color: var(--primary-color);
+  --theme-preview-paragraph-color: var(--black-500-color);
+  --theme-preview-markdown-code-color: var(--black-700-color);
+  --theme-preview-box-background-color: var(--black-200-color);
+  --theme-preview-blockquote-text-color: var(--black-700-color);
+
+  --theme-modal-overlay-background-color: var(--black-1000-color);
+  --theme-alert-box-background-color: var(--white-color);
 }
 
 .dark {
@@ -35,4 +49,18 @@
   --theme-title-bar-text-color: var(--black-400-color);
   --theme-title-bar-background-color: var(--black-900-color);
   --theme-editor-color: var(--black-400-color);
+
+  --theme-preview-heading-1-color: var(--white-color);
+  --theme-preview-heading-2-color: var(--white-color);
+  --theme-preview-heading-3-color: var(--white-color);
+  --theme-preview-heading-4-color: var(--white-color);
+  --theme-preview-heading-5-color: var(--white-color);
+  --theme-preview-heading-6-color: var(--primary-color);
+  --theme-preview-paragraph-color: var(--black-400-color);
+  --theme-preview-markdown-code-color: var(--white-color);
+  --theme-preview-box-background-color: var(--black-800-color);
+  --theme-preview-blockquote-text-color: var(--white-color);
+
+  --theme-modal-overlay-background-color: var(--black-500-color);
+  --theme-alert-box-background-color: var(--black-900-color);
 }

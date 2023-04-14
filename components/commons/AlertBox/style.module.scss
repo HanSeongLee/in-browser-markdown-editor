@@ -1,0 +1,24 @@
+@import "styles/typography";
+
+.alertBox {
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--theme-alert-box-background-color);
+  border-radius: 4px;
+  padding: 24px;
+
+  .title {
+    @include preview-heading-4;
+  }
+
+  .description {
+    @include preview-paragraph;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
