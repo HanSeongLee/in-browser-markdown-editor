@@ -1,0 +1,26 @@
+
+.themeToggleButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &.on {
+    .darkModeIcon path {
+      fill: var(--black-600-color);
+    }
+
+    .lightModeIcon path {
+      fill: var(--white-color);
+    }
+  }
+
+  .darkModeIcon path {
+    fill: var(--white-color);
+    transition: fill 0.3s;
+  }
+
+  .lightModeIcon path {
+    fill: var(--black-600-color);
+    transition: fill 0.3s;
+  }
+}
