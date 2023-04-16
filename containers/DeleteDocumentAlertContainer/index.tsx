@@ -8,17 +8,21 @@ interface IProps extends HTMLAttributes<HTMLDivElement>, IDeleteDocument {
 }
 
 const DeleteDocumentAlertContainer: React.FC<IProps> = ({ documentId, ...props }) => {
-    const { closeModal } = useAppStore();
+    const { closeModal, deleteDocument, findDocumentById } = useAppStore();
+    const document = findDocumentById(documentId);
 
     const onDelete = () => {
-        // TODO: Implement here.
+        deleteDocument(documentId);
         closeModal();
     };
 
+    if (!document) {
+        return <></>;
+    }
+
     return (
         <AlertBox title={'Delete this document?'}
-                  // TODO: Add the document's name
-                  description={`Are you sure you want to delete the ‘welcome.md’ document and its contents? This action cannot be reversed.`}
+                  description={`Are you sure you want to delete the ‘${document.name}’ document and its contents? This action cannot be reversed.`}
                   {...props}
         >
             <Button onClick={onDelete}>
