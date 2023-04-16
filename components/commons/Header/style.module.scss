@@ -1,0 +1,21 @@
+@import "styles/typography";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  background: var(--theme-header-background-color);
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+  }
+
+  .documentControlContainer {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-right: 8px;
+  }
+}
