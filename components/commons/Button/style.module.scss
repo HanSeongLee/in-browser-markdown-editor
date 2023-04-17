@@ -10,6 +10,11 @@
   border: none;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
   &.primary {
     @include heading-medium;
 
