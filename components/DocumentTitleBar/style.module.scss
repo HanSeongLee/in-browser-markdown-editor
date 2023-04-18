@@ -1,0 +1,18 @@
+@import "styles/typography";
+
+.titleContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 24px;
+
+  .input {
+    @include heading-medium;
+
+    color: var(--white-color);
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+}
