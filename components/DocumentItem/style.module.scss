@@ -1,0 +1,25 @@
+@import "styles/typography";
+
+.documentItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .date {
+    @include body-small;
+
+    color: var(--black-500-color);
+  }
+
+  .title {
+    @include heading-medium;
+
+    color: var(--white-color);
+  }
+}
