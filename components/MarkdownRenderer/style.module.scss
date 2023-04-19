@@ -1,0 +1,87 @@
+@import "styles/typography";
+
+.markdownRenderer {
+  flex: 1;
+  display: flex;
+  background: var(--theme-background-color);
+  overflow-y: scroll;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 20px 54px;
+  }
+
+  h1 {
+    @include preview-heading-1;
+    padding-bottom: 2px;
+  }
+
+  h2 {
+    @include preview-heading-2;
+  }
+
+  h3 {
+    @include preview-heading-3;
+  }
+
+  h4 {
+    @include preview-heading-4;
+  }
+
+  h5 {
+    @include preview-heading-5;
+  }
+
+  h6 {
+    @include preview-heading-6;
+  }
+
+  p, li {
+    @include preview-paragraph;
+  }
+
+  ol, ul {
+    padding-left: 44px;
+  }
+
+  blockquote {
+    position: relative;
+    background: var(--theme-preview-box-background-color);
+    border-radius: 4px;
+    padding: 24px;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--primary-color);
+      content: "";
+    }
+
+    p {
+      @include preview-paragraph-bold;
+
+      color: var(--theme-preview-blockquote-text-color);
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  code {
+    @include preview-markdown-code;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    background: var(--theme-preview-box-background-color);
+    border-radius: 4px;
+    padding: 24px;
+  }
+}
