@@ -3,11 +3,16 @@ import produce from 'immer';
 import moment from 'moment';
 
 export interface DocumentSlice {
+    currentDocument: IDocument | null;
     documents: IDocument[];
     findDocumentById: (id: number) => IDocument | undefined;
     addDocument: (name: string) => number;
     deleteDocument: (id: number) => void;
-    updateDocument: (id: number, {name, content}: {name: string, content: string}) => void;
+    updateDocument: (id: number, {name, content}: {name?: string, content?: string}) => void;
+    setCurrentDocument: (id: number) => void;
+    updateCurrentDocument: ({name, content}: {name?: string, content?: string}) => void;
+    saveCurrentDocument: () => void;
+    isChangedCurrentDocument: () => boolean;
 }
 
 export const createDocumentSlice: StateCreator<DocumentSlice> = (set, get) => {
@@ -18,6 +23,7 @@ export const createDocumentSlice: StateCreator<DocumentSlice> = (set, get) => {
     };
 
     return {
+        currentDocument: null,
         documents: [{
             id: generateId(),
             'name': 'untitled-document.md',
@@ -55,7 +61,7 @@ export const createDocumentSlice: StateCreator<DocumentSlice> = (set, get) => {
                 })
             );
         },
-        updateDocument: (id: number, { name, content }: { name: string, content: string }) => {
+        updateDocument: (id: number, { name, content }: { name?: string, content?: string }) => {
             set(
                 produce((draft) => {
                     const document = draft.documents.find(({ id: _id }: { id: number }) => _id === id);
@@ -68,5 +74,51 @@ export const createDocumentSlice: StateCreator<DocumentSlice> = (set, get) => {
                 })
             );
         },
+        setCurrentDocument: (id: number) => {
+            set(
+                produce((draft) => {
+                    const document = draft.documents.find(({ id: _id }: { id: number }) => _id === id);
+                    if (!document) {
+                        return ;
+                    }
+
+                    draft.currentDocument = document;
+                })
+            );
+        },
+        updateCurrentDocument: ({name, content}: {name?: string, content?: string}) => {
+            set(
+                produce((draft) => {
+                    if (name || name === '') {
+                        draft.currentDocument.name = name;
+                    }
+                    if (content || content === '') {
+                        draft.currentDocument.content = content;
+                    }
+                })
+            );
+        },
+        saveCurrentDocument: () => {
+            set(
+                produce((draft) => {
+                    const { id } = draft.currentDocument;
+                    const document = draft.documents.find(({ id: _id }: { id: number }) => _id === id);
+                    document.name = draft.currentDocument.name;
+                    document.content = draft.currentDocument.content;
+                })
+            );
+        },
+        isChangedCurrentDocument: () => {
+            const { currentDocument, documents } = get();
+            if (!currentDocument) {
+                return false;
+            }
+            const { id, name, content } = currentDocument;
+            if (!name) {
+                return false;
+            }
+            const document = documents.find(({ id: _id }: { id: number }) => _id === id);
+            return document ? name !== document.name || content !== document.content : false;
+        }
     };
 };

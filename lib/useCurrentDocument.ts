@@ -3,12 +3,11 @@ import { useRouter } from 'next/router';
 
 const useCurrentDocument = () => {
     const { query: { id }} = useRouter();
-    const { findDocumentById } = useAppStore();
-    const document = findDocumentById(Number(id));
+    const { currentDocument } = useAppStore();
 
     return {
         id,
-        document,
+        document: currentDocument,
     };
 };
 
