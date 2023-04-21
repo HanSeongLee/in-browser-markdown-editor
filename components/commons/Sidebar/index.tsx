@@ -23,7 +23,7 @@ const Sidebar: React.FC<IProps> = ({
              {...props}
         >
             <div className={styles.container}>
-                <div className={styles.topSide}>
+                <header className={styles.header}>
                     <Logo className={styles.logo} />
                     <h2 className={styles.title}>
                         My Documents
@@ -31,13 +31,15 @@ const Sidebar: React.FC<IProps> = ({
                     <Button onClick={onNewDocument}>
                         + New Document
                     </Button>
+                </header>
+                <div className={styles.body}>
                     <DocumentListContainer className={styles.documentListContainer}
                                            documents={documents}
                     />
                 </div>
-                <div className={styles.bottomSide}>
+                <footer className={styles.footer}>
                     <ThemeToggleButtonContainer />
-                </div>
+                </footer>
             </div>
         </nav>
     );
