@@ -30,7 +30,9 @@ const DocumentControlContainer: React.FC<IProps> = (props) => {
             <Button icon={'save'}
                     onClick={onDocumentSave}
                     disabled={!isChangedCurrentDocument()}
-            />
+            >
+                Save Changes
+            </Button>
         </div>
     );
 };
