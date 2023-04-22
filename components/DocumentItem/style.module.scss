@@ -5,6 +5,12 @@
   align-items: center;
   gap: 16px;
 
+  &:hover {
+    .title {
+      color: var(--primary-color)
+    }
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -21,5 +27,6 @@
     @include heading-medium;
 
     color: var(--white-color);
+    transition: color 0.3s;
   }
 }
