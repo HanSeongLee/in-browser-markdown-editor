@@ -15,6 +15,28 @@
     flex: 1;
     display: flex;
     align-items: center;
+
+    .logo {
+      display: none;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 184px;
+      height: 100%;
+
+      @include media(">desktop") {
+        display: flex;
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 40px;
+        border-right: 1px solid var(--black-600-color);
+        content: "";
+      }
+    }
   }
 
   .documentControlContainer {
