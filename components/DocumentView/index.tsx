@@ -25,7 +25,8 @@ const DocumentView: React.FC<IProps> = ({
         >
             <div className={styles.editorContainer}>
                 <TitleBar menu={(
-                    <Button variant={'default'}
+                    <Button className={styles.showPreviewButton}
+                            variant={'default'}
                             icon={'show-preview'}
                             onClick={onPreviewModeToggle}
                     />
@@ -40,14 +41,24 @@ const DocumentView: React.FC<IProps> = ({
             </div>
             <div className={styles.previewContainer}>
                 <TitleBar menu={(
-                    <Button variant={'default'}
-                            icon={'hide-preview'}
-                            onClick={onPreviewModeToggle}
-                    />
+                    <>
+                        <Button className={styles.showPreviewButton}
+                                variant={'default'}
+                                icon={'show-preview'}
+                                onClick={onPreviewModeToggle}
+                        />
+                        <Button className={styles.hidePreviewButton}
+                                variant={'default'}
+                                icon={'hide-preview'}
+                                onClick={onPreviewModeToggle}
+                        />
+                    </>
                 )}>
                     Preview
                 </TitleBar>
-                <MarkdownRenderer markdown={markdown} />
+                <MarkdownRenderer className={styles.markdownRenderer}
+                                  markdown={markdown}
+                />
             </div>
         </div>
     );
