@@ -1,4 +1,5 @@
 @import "styles/typography";
+@import "styles/utils";
 
 .markdownEditor {
   @include preview-markdown-code;
@@ -8,5 +9,6 @@
   background: var(--theme-background-color);
   border: none;
   outline: none;
+  resize: none;
   padding: 16px 12px;
 }
