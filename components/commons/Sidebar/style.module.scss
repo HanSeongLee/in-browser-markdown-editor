@@ -1,4 +1,5 @@
 @import "styles/typography";
+@import "styles/utils";
 
 .sidebar {
   flex: 1;
@@ -51,6 +52,10 @@
 
   .logo {
     margin-bottom: 27px;
+
+    @include media(">desktop") {
+      display: none;
+    }
   }
 
   .title {
