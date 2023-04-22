@@ -1,4 +1,5 @@
 @import "styles/typography";
+@import "styles/utils";
 
 .titleContainer {
   flex: 1;
@@ -6,6 +7,21 @@
   align-items: center;
   gap: 16px;
   margin-left: 24px;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @include media(">tablet") {
+      &::before {
+        @include body-small;
+
+        color: var(--black-500-color);
+        content: 'Document Name';
+      }
+    }
+  }
 
   .input {
     @include heading-medium;
