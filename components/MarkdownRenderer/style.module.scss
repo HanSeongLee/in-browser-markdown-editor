@@ -1,20 +1,29 @@
 @import "styles/typography";
+@import "styles/utils";
 
 .markdownRenderer {
   flex: 1;
   display: flex;
   background: var(--theme-background-color);
-  overflow-y: scroll;
+  flex-direction: column;
 
   .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 16px 20px 54px;
+
+    @include media(">tablet") {
+      max-width: 672px;
+      gap: 22px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   h1 {
     @include preview-heading-1;
+
     padding-bottom: 2px;
   }
 
@@ -51,7 +60,6 @@
     background: var(--theme-preview-box-background-color);
     border-radius: 4px;
     padding: 24px;
-    overflow: hidden;
 
     &::before {
       position: absolute;
@@ -61,6 +69,7 @@
       height: 100%;
       background: var(--primary-color);
       content: "";
+      border-radius: 4px 0 0 4px;
     }
 
     p {
