@@ -60,6 +60,11 @@ export const createDocumentSlice: StateCreator<DocumentSlice> = (set, get) => {
                     draft.documents = draft.documents.filter(({ id: _id }: { id: number }) => _id !== id);
                 })
             );
+
+            const { documents, addDocument } = get();
+            if (documents.length === 0) {
+                addDocument('untitled-document.md');
+            }
         },
         updateDocument: (id: number, { name, content }: { name?: string, content?: string }) => {
             set(
