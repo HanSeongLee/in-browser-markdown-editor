@@ -1,11 +1,15 @@
 @import "styles/typography";
+@import "styles/utils";
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 56px;
   background: var(--theme-header-background-color);
+
+  @include media(">tablet") {
+    height: 72px;
+  }
 
   .leftSide {
     flex: 1;

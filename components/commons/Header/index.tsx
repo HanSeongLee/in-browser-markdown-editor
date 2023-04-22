@@ -16,7 +16,8 @@ const Header: React.FC<IProps> = ({ sidebarOpen, toggleSidebar, className, ...pr
                 {...props}
         >
             <div className={styles.leftSide}>
-                <Button variant={'menu'}
+                <Button className={styles.menuButton}
+                        variant={'menu'}
                         icon={!sidebarOpen ? 'menu' : 'close'}
                         onClick={toggleSidebar}
                 />
