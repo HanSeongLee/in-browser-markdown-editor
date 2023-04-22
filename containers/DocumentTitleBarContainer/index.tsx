@@ -5,7 +5,7 @@ import { useAppStore } from 'lib/store';
 
 const DocumentTitleBarContainer: React.FC = () => {
     const { document } = useCurrentDocument();
-    const { updateCurrentDocument } = useAppStore();
+    const { updateCurrentDocument, saveCurrentDocument } = useAppStore();
 
     if (!document) {
         return <></>;
@@ -17,9 +17,17 @@ const DocumentTitleBarContainer: React.FC = () => {
         });
     };
 
+    const onKeyDownTitle = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            saveCurrentDocument();
+            e.currentTarget.blur();
+        }
+    }
+
     return (
         <DocumentTitleBar value={document.name}
                           onChange={onChangeTitle}
+                          onKeyDown={onKeyDownTitle}
         />
     );
 };
