@@ -32,6 +32,21 @@
     overflow-y: scroll;
     padding: 0 24px;
     margin: 24px 0;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 8px;
+      background-clip: padding-box;
+      border: 1px solid var(--black-900-color);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--black-900-color);
+    }
   }
 
   .logo {
@@ -52,6 +67,5 @@
     flex-direction: column;
     gap: 26px;
     list-style: none;
-    overflow-y: scroll;
   }
 }
