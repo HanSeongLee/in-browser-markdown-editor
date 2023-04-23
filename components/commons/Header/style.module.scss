@@ -44,5 +44,9 @@
     align-items: center;
     gap: 13px;
     margin-right: 8px;
+
+    @include media(">tablet") {
+      margin-right: 16px;
+    }
   }
 }
