@@ -4,11 +4,8 @@
   flex: 1;
   display: flex;
   max-height: inherit;
+  flex-direction: row !important;
   overflow: hidden;
-
-  @include media(">tablet") {
-    flex-direction: row !important;
-  }
 
   &.previewMode {
     .editorContainer {
@@ -79,6 +76,7 @@
 
     .markdownRenderer {
       overflow-y: scroll;
+      max-height: inherit;
       padding: 16px 20px 54px;
 
       @include media(">tablet") {
