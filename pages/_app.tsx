@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { Roboto, Roboto_Mono, Roboto_Slab } from 'next/font/google';
 import { ThemeContextWrapper } from 'lib/ThemeContext';
+import { useEffect } from 'react';
 
 const roboto = Roboto({
   weight: ['300', '400', '500'],
@@ -19,6 +20,19 @@ const robotoMono = Roboto_Mono({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const onResize = () => {
+        const html = window.document.documentElement;
+        html.style.setProperty('--app-height', `${window.innerHeight}px`);
+    };
+
+    useEffect(() => {
+        onResize();
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
+    }, []);
+
     return (
         <>
             <style jsx global>{`
