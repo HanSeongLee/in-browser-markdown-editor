@@ -35,6 +35,7 @@ const DocumentView: React.FC<IProps> = ({
                 </TitleBar>
                 <MarkdownEditor onChange={e => onMarkdownChange(e.target.value)}
                                 value={markdown}
+                                title={'Markdown content'}
                 >
                     {markdown}
                 </MarkdownEditor>

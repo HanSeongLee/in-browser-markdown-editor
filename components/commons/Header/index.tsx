@@ -21,6 +21,7 @@ const Header: React.FC<IProps> = ({ sidebarOpen, toggleSidebar, className, ...pr
                         variant={'menu'}
                         icon={!sidebarOpen ? 'menu' : 'close'}
                         onClick={toggleSidebar}
+                        title={!sidebarOpen ? 'Open menu' : 'Close menu'}
                 />
                 <Logo className={styles.logo} />
                 <DocumentTitleBarContainer />

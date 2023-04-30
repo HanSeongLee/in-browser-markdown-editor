@@ -13,6 +13,7 @@ const DocumentTitleBar: React.FC<IProps> = ({ className, ...props }) => {
             <DocumentIcon />
             <div className={styles.titleWrapper}>
                 <input className={styles.input}
+                       title={'Document title'}
                        {...props}
                 />
             </div>

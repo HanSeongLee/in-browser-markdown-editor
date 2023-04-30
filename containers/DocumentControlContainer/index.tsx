@@ -26,6 +26,7 @@ const DocumentControlContainer: React.FC<IProps> = (props) => {
             <Button variant={'default'}
                     icon={'delete'}
                     onClick={onDocumentDelete}
+                    title={'Delete document'}
             />
             <Button icon={'save'}
                     onClick={onDocumentSave}
